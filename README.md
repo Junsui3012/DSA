@@ -1,1 +1,11 @@
 # DSA
+
+---
+
+This repo has been made in order to track my DSA learning progress through saving solved questions ordered in patterns commonly observed on LeetCode
+
+---
+
+### 1. Fast and slow pointers
+
+- question 142. Linked List Cycle II: Solved using Floyd's algorithm to detect cycle and starting point
