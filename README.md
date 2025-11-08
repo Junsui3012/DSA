@@ -12,3 +12,7 @@ This repo has been made in order to track my DSA learning progress through savin
 - question 19. Remove nth node from end of list: solved using two pointer separated by the distance
 - question 287. Find the duplicate number: solved using Floyd's algorithm to detect cycle
 - question 234. Palindrome linked list: solved by reversing the second half of the linked list
+
+### 2. Overlapping intervals
+
+- question 56. Merge intervals: solved by sorting the starting interval and comparing the right hand side of the intervals
