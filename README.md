@@ -17,3 +17,4 @@ This repo has been made in order to track my DSA learning progress through savin
 
 - question 56. Merge intervals: solved by sorting the starting interval and comparing the right hand side of the intervals
 - question 57. Insert interval: solved by dividing the interval into 3 sections and inserting the modified newInterval into it's place
+- question 731. My Calender II: solved by storing the overlaps in an array which is used to compare the next interval
