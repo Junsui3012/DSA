@@ -21,3 +21,4 @@ This repo has been made in order to track my DSA learning progress through savin
 
 ### 3. Prefix Sum
 - question 1991. Find the middle index in array: solved by comparing the sum till the current index and the difference of prefix with the current index at each iteration
+- question 238. Product of Array Except Self: solved by computing prefix sum from left side and then from right side
