@@ -24,3 +24,4 @@ This repo has been made in order to track my DSA learning progress through savin
 - question 238. Product of Array Except Self: solved by computing prefix sum from left side and then from right side
 - question 152. Maximum Product Subarray: solved by storing current positive, current negative and overall highest
 - question 304. Range Sum query 2D - Immutable: solved by creating a m+1 x n+1 matrix for prefix sum and subtracting the small rectangles from large rectangles during output
+- question 2270. Number of ways to Split Array: solved by storing the left sum and right sum, then counting the result
