@@ -32,3 +32,4 @@ This repo has been made in order to track my DSA learning progress through savin
 - question 187. Repeated DNA Sequences: solved by storing the seen and repeated sequences in hashsets
 - question 567. Permutation in String: solved by storing the count of alphabets in hashmap and then using sliding window on the 2nd string
 - question 2653. Sliding Subarray Beauty: solved by creating a count array for the numbers and used it to get xth smallest element in the sliding window
+- question 239. Sliding Window Maximum: solved by creating a deque to keep maximum at top, and decresing elements thereafter and only deleting when new element is larger or maximum expires from window
