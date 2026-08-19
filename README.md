@@ -28,6 +28,7 @@ This repo has been made in order to track my DSA learning progress through savin
 
 ### 4. Sliding Window
 - question 2461. Maximum Sum of Distinct Subarrays With Length K: Solved by using a set to check for duplicates, if found then moved the left of window until the first instance was removed and finally returned the maximum sum of subarray
--question 1343. Number of Sub-arrays of Size K and Average Greater than or Equal to Threshold: Solved by comparing the tracked sum with the multiplied threshold on each subarray of size k
+- question 1343. Number of Sub-arrays of Size K and Average Greater than or Equal to Threshold: Solved by comparing the tracked sum with the multiplied threshold on each subarray of size k
 - question 187. Repeated DNA Sequences: solved by storing the seen and repeated sequences in hashsets
 - question 567. Permutation in String: solved by storing the count of alphabets in hashmap and then using sliding window on the 2nd string
+- question 2653. Sliding Subarray Beauty: solved by creating a count array for the numbers and used it to get xth smallest element in the sliding window
