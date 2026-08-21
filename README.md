@@ -37,3 +37,4 @@ This repo has been made in order to track my DSA learning progress through savin
 #### Variable Length
 - question 3. Longest Substring Without Repeating Characters: solved by storing duplicates in a hashset OR by storing the last seen index of character in hashmap
 - question 209. Maximum Size Subarray Sum: solved by storing the current sum, then looking for the minimum interval with sum greater than target
+- question 713. Subarray Product less than K: solved by storing current product of the sliding window and adding the count of subarrays ending at right to the total count
