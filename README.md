@@ -40,3 +40,4 @@ This repo has been made in order to track my DSA learning progress through savin
 - question 713. Subarray Product less than K: solved by storing current product of the sliding window and adding the count of subarrays ending at right to the total count
 - question 1004. Max Consecutive Ones III: solved by storing the count of zeros in the sliding window and returning the best length. One optimization is by removing the inner loop to shorten the window, since we do not care about smaller subarrays
 - question 904. Fruit into Baskets: solved by storing the count of fruits in the window and returning the best length
+- question 1248. Count number of Nice Subarrays: solved by storing the number of subarrays with odd count less than k, and subtracting that by the number of subarrays less than k-1
