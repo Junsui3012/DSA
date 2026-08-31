@@ -41,3 +41,4 @@ This repo has been made in order to track my DSA learning progress through savin
 - question 1004. Max Consecutive Ones III: solved by storing the count of zeros in the sliding window and returning the best length. One optimization is by removing the inner loop to shorten the window, since we do not care about smaller subarrays
 - question 904. Fruit into Baskets: solved by storing the count of fruits in the window and returning the best length
 - question 1248. Count number of Nice Subarrays: solved by storing the number of subarrays with odd count less than k, and subtracting that by the number of subarrays less than k-1
+- question 76. Minimum Window Substring: solved by maintaining count of current elements and moving left pointer until minimum length of substring is found
