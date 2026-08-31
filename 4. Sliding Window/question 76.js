@@ -1,3 +1,4 @@
+// Original Logic
 /**
  * @param {string} s
  * @param {string} t
@@ -37,3 +38,47 @@ const checkMaps = (tMap, sMap) => {
     }
     return true
 }
+
+// Optimal Logic
+/**
+ * @param {string} s
+ * @param {string} t
+ * @return {string}
+ */
+var minWindow = function(s, t) {
+    if (s.length<t.length) return ""
+
+    const need = new Map()
+    for(const c of t){
+        need.set(c, (need.get(c) ?? 0) + 1)
+    }
+    const required = need.size
+
+    let window = new Map()
+    let start = 0
+    let minLen = Infinity
+
+    let formed = 0
+
+    let l = 0
+
+    for(let r=0; r<s.length; r++){
+        const right = s[r]
+        window.set(right, (window.get(right) ?? 0) + 1)
+
+        if (need.has(right) && window.get(right)===need.get(right)) formed++
+
+        while (formed === required){
+            const left = s[l]
+            const windowWidth = r-l+1
+            if (windowWidth<minLen){
+                start = l
+                minLen = windowWidth
+            }
+            window.set(left, window.get(left)-1)
+            l++
+            if(need.has(left) && window.get(left)<need.get(left)) formed--
+        }
+    }
+    return (minLen)===Infinity ? "" : s.slice(start, start+minLen)
+};
