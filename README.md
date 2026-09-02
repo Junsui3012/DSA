@@ -42,3 +42,6 @@ This repo has been made in order to track my DSA learning progress through savin
 - question 904. Fruit into Baskets: solved by storing the count of fruits in the window and returning the best length
 - question 1248. Count number of Nice Subarrays: solved by storing the number of subarrays with odd count less than k, and subtracting that by the number of subarrays less than k-1
 - question 76. Minimum Window Substring: solved by maintaining count of current elements and moving left pointer until minimum length of substring is found
+
+### 5. Two Pointers
+- question 167. Two Sum II - Input array is sorted: solved by checking the sum of the left and right pointers in the array
