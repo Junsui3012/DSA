@@ -46,3 +46,4 @@ This repo has been made in order to track my DSA learning progress through savin
 ### 5. Two Pointers
 - question 167. Two Sum II - Input array is sorted: solved by checking the sum of the left and right pointers in the array
 - question 75. Sort Colors: solved by using Ducth National Flag algorithm (DNF) to divide the array into sorted and unsorted parts
+- question 31. Next permutation: solved by finding the rightmost pivot element, swapping with the next largest value and sorting the rest of the array after the pivot
