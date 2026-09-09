@@ -47,3 +47,4 @@ This repo has been made in order to track my DSA learning progress through savin
 - question 167. Two Sum II - Input array is sorted: solved by checking the sum of the left and right pointers in the array
 - question 75. Sort Colors: solved by using Ducth National Flag algorithm (DNF) to divide the array into sorted and unsorted parts
 - question 31. Next permutation: solved by finding the rightmost pivot element, swapping with the next largest value and sorting the rest of the array after the pivot
+- question 11. Container with most water: solved by using left and right pointer starting from either ends of the array and keeping the maximum area in a variable
