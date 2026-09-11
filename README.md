@@ -49,3 +49,4 @@ This repo has been made in order to track my DSA learning progress through savin
 - question 31. Next permutation: solved by finding the rightmost pivot element, swapping with the next largest value and sorting the rest of the array after the pivot
 - question 11. Container with most water: solved by using left and right pointer starting from either ends of the array and keeping the maximum area in a variable
 - question 948. Bag of tokens: solved by sorting the array and then greedily collecting smallest tokens for score from the left and largest tokens for power from the right
+- question 42. Trapping Rain Water: solved by tracking the leftmax and rightmax from either side of the array and adding the difference of max and current pointer element to the total water
