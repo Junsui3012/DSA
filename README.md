@@ -54,3 +54,4 @@ This repo has been made in order to track my DSA learning progress through savin
 ### 6. Cyclic Sort
 - question 268. Missing Number: solved by first sorting by swapping the element at the correct index, then comparing the index to the value itself and returning mismatch. Alternate solution involves using xor prefix to eliminate duplicate in the range appearing in the given array. Alternate solution involves solving for the range sum and array sum and returning the difference
 - question 448. Find all missing numbers in an array: solved by using cyclic sort to put elements into correct positions and then storing mismatching indexes and their corresponding value
+- question 645. Set Mismatch: solved by sorting using cyclic sort and then returning the spot where the duplicate element resides
