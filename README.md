@@ -56,3 +56,4 @@ This repo has been made in order to track my DSA learning progress through savin
 - question 448. Find all missing numbers in an array: solved by using cyclic sort to put elements into correct positions and then storing mismatching indexes and their corresponding value
 - question 645. Set Mismatch: solved by sorting using cyclic sort and then returning the spot where the duplicate element resides
 - question 41. First missing positive: solved by sorting the elements of the array in correct order starting from 1 and then returning the first mismatch
+- question 442. Find all duplicates in an array: solved by sorting using cyclic sort and then pushing mismatching elements into the result array
