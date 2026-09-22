@@ -57,3 +57,6 @@ This repo has been made in order to track my DSA learning progress through savin
 - question 645. Set Mismatch: solved by sorting using cyclic sort and then returning the spot where the duplicate element resides
 - question 41. First missing positive: solved by sorting the elements of the array in correct order starting from 1 and then returning the first mismatch
 - question 442. Find all duplicates in an array: solved by sorting using cyclic sort and then pushing mismatching elements into the result array
+
+### 7. Reversal of linked list (in-place)
+- question 206. Reverse linked list: solved by initializing a null node, then pointing the head to it and shifting both of them to the right by one node on each iteration until head becomes null
