@@ -61,3 +61,4 @@ This repo has been made in order to track my DSA learning progress through savin
 ### 7. Reversal of linked list (in-place)
 - question 206. Reverse linked list: solved by initializing a null node, then pointing the head to it and shifting both of them to the right by one node on each iteration until head becomes null
 - question 25. Reverse nodes in k-groups: solved by making a reverse funtion for k nodes and then correctly connecting the next of left and right of returned nodes with the previous and next nodes until null
+- question 24. Swap nodes in pairs: solved by tracking the previous head node and the current head node, then iteratively swapping with the current head's next node as temp
