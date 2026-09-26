@@ -65,3 +65,4 @@ This repo has been made in order to track my DSA learning progress through savin
 
 ### 8. Matrix Manipulation
 - question 48. Rotate Image: solved by storing the 4 cyclic swaps in variables and then putting them in respective position. Alternate solution involves first taking transpose of the matrix then reversing each row
+- question 54. Spiral matrix: solved by tracking the left, right, top and bottom limits and then printing the boundaries while decrementing the limits after each iteration
