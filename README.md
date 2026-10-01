@@ -68,3 +68,6 @@ This repo has been made in order to track my DSA learning progress through savin
 - question 54. Spiral matrix: solved by tracking the left, right, top and bottom limits and then printing the boundaries while decrementing the limits after each iteration
 - question 73. Set Matrix zeroes: solved by using the first col and first row to store presence of 0 in the rest of the matrix, then a special variable to store zero or not for the first column itself, then finally turning the required values to zero. Alternative solution stores the zero carrying rows and columns in separate sets before conversion of the matrix
 - question 289. Game of life: solved by setting the alive -> dead changing cells to 2 and dead -> alive changing cells to -1 to keep the current state consistent (< 1 for currently dead and > 0 for currently alive), then applying the changes for next state
+
+### 9. BFS
+- question 207. Course Schedule: solved by creating an adjency list of courses like a graph and also created a count map for in-degrees of each node (course). Then applied BFS to go through each node where the course will only be added to the queue if all pre-nodes are already traversed (checked using the count map). Finally, if all nodes were traversed, true is returned but if cyclic dependency exists, then false is returned
