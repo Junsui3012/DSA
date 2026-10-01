@@ -71,3 +71,6 @@ This repo has been made in order to track my DSA learning progress through savin
 
 ### 9. BFS
 - question 207. Course Schedule: solved by creating an adjency list of courses like a graph and also created a count map for in-degrees of each node (course). Then applied BFS to go through each node where the course will only be added to the queue if all pre-nodes are already traversed (checked using the count map). Finally, if all nodes were traversed, true is returned but if cyclic dependency exists, then false is returned
+
+### 10. DFS
+- question 200. Number of islands: solved by calling a recursive DFS function every time 1 is encountered in the grid. Instead of using a separate matrix to keep track of visited islands, turn the original islands in grid to 0. Finally, the count of times the DFS was called from the start is returned
