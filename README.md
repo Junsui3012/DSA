@@ -1,20 +1,16 @@
 # DSA
 
----
-
 This repo has been made in order to track my DSA learning progress through saving solved questions ordered in patterns commonly observed on LeetCode
 
 ---
 
 ### 1. Fast and slow pointers
-
 - question 142. Linked List Cycle II: Solved using Floyd's algorithm to detect cycle and starting point
 - question 19. Remove nth node from end of list: solved using two pointer separated by the distance
 - question 287. Find the duplicate number: solved using Floyd's algorithm to detect cycle
 - question 234. Palindrome linked list: solved by reversing the second half of the linked list
 
 ### 2. Overlapping intervals
-
 - question 56. Merge intervals: solved by sorting the starting interval and comparing the right hand side of the intervals
 - question 57. Insert interval: solved by dividing the interval into 3 sections and inserting the modified newInterval into it's place
 - question 731. My Calender II: solved by storing the overlaps in an array which is used to compare the next interval
@@ -71,6 +67,7 @@ This repo has been made in order to track my DSA learning progress through savin
 
 ### 9. BFS
 - question 207. Course Schedule: solved by creating an adjency list of courses like a graph and also created a count map for in-degrees of each node (course). Then applied BFS to go through each node where the course will only be added to the queue if all pre-nodes are already traversed (checked using the count map). Finally, if all nodes were traversed, true is returned but if cyclic dependency exists, then false is returned
+- question 1091. Shortest Path in Binary Matrix: solved by first eliminating the starting and target square edge cases, then implementing BFS on a queue using array and head pointer for dequeuing. The visited elements are turned to 1 at the time of enqueue so each element is only visited once (if done at the time of dequeue, you would have to check if the current node was previously visited). If the target element is reached inside the loop, result is returned, otherwise -1 if no path leads to target.
 
 ### 10. DFS
 - question 200. Number of islands: solved by calling a recursive DFS function every time 1 is encountered in the grid. Instead of using a separate matrix to keep track of visited islands, turn the original islands in grid to 0. Finally, the count of times the DFS was called from the start is returned
