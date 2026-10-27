@@ -74,3 +74,4 @@ This repo has been made in order to track my DSA learning progress through savin
 
 ### 10. DFS
 - question 200. Number of islands: solved by calling a recursive DFS function every time 1 is encountered in the grid. Instead of using a separate matrix to keep track of visited islands, turn the original islands in grid to 0. Finally, the count of times the DFS was called from the start is returned
+- question 1254. Number of enclosed islands: firstly, handle edge case of matrix size less than 3, which cannot have any enclosed islands. Then, solved by tracking a isEnclosed flag outside the function and then turning it false in case dfs is called at the outermost edges. Alternative: using a simple dfs on all the outermost edge elements to eliminate any island out of bounds, then simply counting all remaining islands. Alternative: return a boolean flag from the dfs function, true in case of 1 at the edge and flase in case of falling off the edge
