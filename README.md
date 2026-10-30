@@ -5,75 +5,76 @@ This repo has been made in order to track my DSA learning progress through savin
 ---
 
 ### 1. Fast and slow pointers
-- question 142. Linked List Cycle II: Solved using Floyd's algorithm to detect cycle and starting point
-- question 19. Remove nth node from end of list: solved using two pointer separated by the distance
-- question 287. Find the duplicate number: solved using Floyd's algorithm to detect cycle
-- question 234. Palindrome linked list: solved by reversing the second half of the linked list
+- question 142. Linked List Cycle II: Solved using Floyd's algorithm to detect cycle and starting point.
+- question 19. Remove nth node from end of list: solved using two pointer separated by the distance.
+- question 287. Find the duplicate number: solved using Floyd's algorithm to detect cycle.
+- question 234. Palindrome linked list: solved by reversing the second half of the linked list.
 
 ### 2. Overlapping intervals
-- question 56. Merge intervals: solved by sorting the starting interval and comparing the right hand side of the intervals
-- question 57. Insert interval: solved by dividing the interval into 3 sections and inserting the modified newInterval into it's place
-- question 731. My Calender II: solved by storing the overlaps in an array which is used to compare the next interval
+- question 56. Merge intervals: solved by sorting the starting interval and comparing the right hand side of the intervals.
+- question 57. Insert interval: solved by dividing the interval into 3 sections and inserting the modified newInterval into it's place.
+- question 731. My Calender II: solved by storing the overlaps in an array which is used to compare the next interval.
 
 ### 3. Prefix Sum
-- question 1991. Find the middle index in array: solved by comparing the sum till the current index and the difference of prefix with the current index at each iteration
-- question 238. Product of Array Except Self: solved by computing prefix sum from left side and then from right side
-- question 152. Maximum Product Subarray: solved by storing current positive, current negative and overall highest
-- question 304. Range Sum query 2D - Immutable: solved by creating a m+1 x n+1 matrix for prefix sum and subtracting the small rectangles from large rectangles during output
-- question 2270. Number of ways to Split Array: solved by storing the left sum and right sum, then counting the result
+- question 1991. Find the middle index in array: solved by comparing the sum till the current index and the difference of prefix with the current index at each iteration.
+- question 238. Product of Array Except Self: solved by computing prefix sum from left side and then from right side.
+- question 152. Maximum Product Subarray: solved by storing current positive, current negative and overall highest.
+- question 304. Range Sum query 2D - Immutable: solved by creating a m+1 x n+1 matrix for prefix sum and subtracting the small rectangles from large rectangles during output.
+- question 2270. Number of ways to Split Array: solved by storing the left sum and right sum, then counting the result.
 
 ### 4. Sliding Window
 #### Fixed Length
-- question 2461. Maximum Sum of Distinct Subarrays With Length K: Solved by using a set to check for duplicates, if found then moved the left of window until the first instance was removed and finally returned the maximum sum of subarray
-- question 1343. Number of Sub-arrays of Size K and Average Greater than or Equal to Threshold: Solved by comparing the tracked sum with the multiplied threshold on each subarray of size k
-- question 187. Repeated DNA Sequences: solved by storing the seen and repeated sequences in hashsets
-- question 567. Permutation in String: solved by storing the count of alphabets in hashmap and then using sliding window on the 2nd string
-- question 2653. Sliding Subarray Beauty: solved by creating a count array for the numbers and used it to get xth smallest element in the sliding window
-- question 239. Sliding Window Maximum: solved by creating a deque to keep maximum at top, and decresing elements thereafter and only deleting when new element is larger or maximum expires from window
+- question 2461. Maximum Sum of Distinct Subarrays With Length K: Solved by using a set to check for duplicates, if found then moved the left of window until the first instance was removed and finally returned the maximum sum of subarray.
+- question 1343. Number of Sub-arrays of Size K and Average Greater than or Equal to Threshold: Solved by comparing the tracked sum with the multiplied threshold on each subarray of size k.
+- question 187. Repeated DNA Sequences: solved by storing the seen and repeated sequences in hashsets.
+- question 567. Permutation in String: solved by storing the count of alphabets in hashmap and then using sliding window on the 2nd string.
+- question 2653. Sliding Subarray Beauty: solved by creating a count array for the numbers and used it to get xth smallest element in the sliding window.
+- question 239. Sliding Window Maximum: solved by creating a deque to keep maximum at top, and decresing elements thereafter and only deleting when new element is larger or maximum expires from window.
 #### Variable Length
-- question 3. Longest Substring Without Repeating Characters: solved by storing duplicates in a hashset OR by storing the last seen index of character in hashmap
-- question 209. Maximum Size Subarray Sum: solved by storing the current sum, then looking for the minimum interval with sum greater than target
-- question 713. Subarray Product less than K: solved by storing current product of the sliding window and adding the count of subarrays ending at right to the total count
-- question 1004. Max Consecutive Ones III: solved by storing the count of zeros in the sliding window and returning the best length. One optimization is by removing the inner loop to shorten the window, since we do not care about smaller subarrays
-- question 904. Fruit into Baskets: solved by storing the count of fruits in the window and returning the best length
-- question 1248. Count number of Nice Subarrays: solved by storing the number of subarrays with odd count less than k, and subtracting that by the number of subarrays less than k-1
-- question 76. Minimum Window Substring: solved by maintaining count of current elements and moving left pointer until minimum length of substring is found
+- question 3. Longest Substring Without Repeating Characters: solved by storing duplicates in a hashset OR by storing the last seen index of character in hashmap.
+- question 209. Maximum Size Subarray Sum: solved by storing the current sum, then looking for the minimum interval with sum greater than target.
+- question 713. Subarray Product less than K: solved by storing current product of the sliding window and adding the count of subarrays ending at right to the total count.
+- question 1004. Max Consecutive Ones III: solved by storing the count of zeros in the sliding window and returning the best length. One optimization is by removing the inner loop to shorten the window, since we do not care about smaller subarrays.
+- question 904. Fruit into Baskets: solved by storing the count of fruits in the window and returning the best length.
+- question 1248. Count number of Nice Subarrays: solved by storing the number of subarrays with odd count less than k, and subtracting that by the number of subarrays less than k-1.
+- question 76. Minimum Window Substring: solved by maintaining count of current elements and moving left pointer until minimum length of substring is found.
 
 ### 5. Two Pointers
-- question 167. Two Sum II - Input array is sorted: solved by checking the sum of the left and right pointers in the array
-- question 75. Sort Colors: solved by using Ducth National Flag algorithm (DNF) to divide the array into sorted and unsorted parts
-- question 31. Next permutation: solved by finding the rightmost pivot element, swapping with the next largest value and sorting the rest of the array after the pivot
-- question 11. Container with most water: solved by using left and right pointer starting from either ends of the array and keeping the maximum area in a variable
-- question 948. Bag of tokens: solved by sorting the array and then greedily collecting smallest tokens for score from the left and largest tokens for power from the right
-- question 42. Trapping Rain Water: solved by tracking the leftmax and rightmax from either side of the array and adding the difference of max and current pointer element to the total water
+- question 167. Two Sum II - Input array is sorted: solved by checking the sum of the left and right pointers in the array.
+- question 75. Sort Colors: solved by using Ducth National Flag algorithm (DNF) to divide the array into sorted and unsorted parts.
+- question 31. Next permutation: solved by finding the rightmost pivot element, swapping with the next largest value and sorting the rest of the array after the pivot.
+- question 11. Container with most water: solved by using left and right pointer starting from either ends of the array and keeping the maximum area in a variable.
+- question 948. Bag of tokens: solved by sorting the array and then greedily collecting smallest tokens for score from the left and largest tokens for power from the right.
+- question 42. Trapping Rain Water: solved by tracking the leftmax and rightmax from either side of the array and adding the difference of max and current pointer element to the total water.
 
 ### 6. Cyclic Sort
-- question 268. Missing Number: solved by first sorting by swapping the element at the correct index, then comparing the index to the value itself and returning mismatch. Alternate solution involves using xor prefix to eliminate duplicate in the range appearing in the given array. Alternate solution involves solving for the range sum and array sum and returning the difference
-- question 448. Find all missing numbers in an array: solved by using cyclic sort to put elements into correct positions and then storing mismatching indexes and their corresponding value
-- question 645. Set Mismatch: solved by sorting using cyclic sort and then returning the spot where the duplicate element resides
-- question 41. First missing positive: solved by sorting the elements of the array in correct order starting from 1 and then returning the first mismatch
-- question 442. Find all duplicates in an array: solved by sorting using cyclic sort and then pushing mismatching elements into the result array
+- question 268. Missing Number: solved by first sorting by swapping the element at the correct index, then comparing the index to the value itself and returning mismatch. Alternate solution involves using xor prefix to eliminate duplicate in the range appearing in the given array. Alternate solution involves solving for the range sum and array sum and returning the difference.
+- question 448. Find all missing numbers in an array: solved by using cyclic sort to put elements into correct positions and then storing mismatching indexes and their corresponding value.
+- question 645. Set Mismatch: solved by sorting using cyclic sort and then returning the spot where the duplicate element resides.
+- question 41. First missing positive: solved by sorting the elements of the array in correct order starting from 1 and then returning the first mismatch.
+- question 442. Find all duplicates in an array: solved by sorting using cyclic sort and then pushing mismatching elements into the result array.
 
 ### 7. Reversal of linked list (in-place)
-- question 206. Reverse linked list: solved by initializing a null node, then pointing the head to it and shifting both of them to the right by one node on each iteration until head becomes null
-- question 25. Reverse nodes in k-groups: solved by making a reverse funtion for k nodes and then correctly connecting the next of left and right of returned nodes with the previous and next nodes until null
-- question 24. Swap nodes in pairs: solved by tracking the previous head node and the current head node, then iteratively swapping with the current head's next node as temp
+- question 206. Reverse linked list: solved by initializing a null node, then pointing the head to it and shifting both of them to the right by one node on each iteration until head becomes null.
+- question 25. Reverse nodes in k-groups: solved by making a reverse funtion for k nodes and then correctly connecting the next of left and right of returned nodes with the previous and next nodes until null.
+- question 24. Swap nodes in pairs: solved by tracking the previous head node and the current head node, then iteratively swapping with the current head's next node as temp.
 
 ### 8. Matrix Manipulation
-- question 48. Rotate Image: solved by storing the 4 cyclic swaps in variables and then putting them in respective position. Alternate solution involves first taking transpose of the matrix then reversing each row
-- question 54. Spiral matrix: solved by tracking the left, right, top and bottom limits and then printing the boundaries while decrementing the limits after each iteration
-- question 73. Set Matrix zeroes: solved by using the first col and first row to store presence of 0 in the rest of the matrix, then a special variable to store zero or not for the first column itself, then finally turning the required values to zero. Alternative solution stores the zero carrying rows and columns in separate sets before conversion of the matrix
-- question 289. Game of life: solved by setting the alive -> dead changing cells to 2 and dead -> alive changing cells to -1 to keep the current state consistent (< 1 for currently dead and > 0 for currently alive), then applying the changes for next state
+- question 48. Rotate Image: solved by storing the 4 cyclic swaps in variables and then putting them in respective position. Alternate solution involves first taking transpose of the matrix then reversing each row.
+- question 54. Spiral matrix: solved by tracking the left, right, top and bottom limits and then printing the boundaries while decrementing the limits after each iteration.
+- question 73. Set Matrix zeroes: solved by using the first col and first row to store presence of 0 in the rest of the matrix, then a special variable to store zero or not for the first column itself, then finally turning the required values to zero. Alternative solution stores the zero carrying rows and columns in separate sets before conversion of the matrix.
+- question 289. Game of life: solved by setting the alive -> dead changing cells to 2 and dead -> alive changing cells to -1 to keep the current state consistent (< 1 for currently dead and > 0 for currently alive), then applying the changes for next state.
 
 ### 9. BFS
-- question 207. Course Schedule: solved by creating an adjency list of courses like a graph and also created a count map for in-degrees of each node (course). Then applied BFS to go through each node where the course will only be added to the queue if all pre-nodes are already traversed (checked using the count map). Finally, if all nodes were traversed, true is returned but if cyclic dependency exists, then false is returned
+- question 207. Course Schedule: solved by creating an adjency list of courses like a graph and also created a count map for in-degrees of each node (course). Then applied BFS to go through each node where the course will only be added to the queue if all pre-nodes are already traversed (checked using the count map). Finally, if all nodes were traversed, true is returned but if cyclic dependency exists, then false is returned.
 - question 1091. Shortest Path in Binary Matrix: solved by first eliminating the starting and target square edge cases, then implementing BFS on a queue using array and head pointer for dequeuing. The visited elements are turned to 1 at the time of enqueue so each element is only visited once (if done at the time of dequeue, you would have to check if the current node was previously visited). If the target element is reached inside the loop, result is returned, otherwise -1 if no path leads to target.
-- question 994. Rotting oranges: solved by initializing the queue with coordinates of rotten oranges along with current time at which they got rotten. Tracked the total count of oranges to find out if all oranges were visited or not. In case of no orange present, i.e., 0 count then it was treated as the same as rotting all oranges. But if the count wasn't zero, we checked if the initial queue was empty, i.e., absence of rotten oranges, which was treated as impossible and -1 was returned. Otherwise, the queue was iterated until all reachable oranges were rotten
-- question 1162. As far away from land as possible: solved by initializing the travel queue with the land nodes, then traversing iteratively, increasing the distance parameter one by one for each step which is equivalent to manhattan distance in this case (x and y movement only). For edge cases, checked whether the initialized queue is empty or contains n*n elements. Finally, the longest distance is returned
-- question 127. Word Ladder: solved first with simple BFS, storing all possible next word iterations in an adjacency list by comparing all 26 from words in the given word list and then performing BFS using it. Best approach: solved by applying multi directional BFS on a pattern bucket that iterates over the list in a single pass and stores wildcard patterns like "\*ot, h\*t, ho\*" and all matching words for the pattern in a hashmap. Then, the queue tracks the word, distance and the source. When a new node is visited, if it already exists in visited and there is a mismatch of sources, the sum of distance is returned, otherwise we continue and if the node is visited for the first time, it is appended to the queue instead. The main loop runs like a normal BFS where the queue alternates between words from different sources automatically
+- question 994. Rotting oranges: solved by initializing the queue with coordinates of rotten oranges along with current time at which they got rotten. Tracked the total count of oranges to find out if all oranges were visited or not. In case of no orange present, i.e., 0 count then it was treated as the same as rotting all oranges. But if the count wasn't zero, we checked if the initial queue was empty, i.e., absence of rotten oranges, which was treated as impossible and -1 was returned. Otherwise, the queue was iterated until all reachable oranges were rotten.
+- question 1162. As far away from land as possible: solved by initializing the travel queue with the land nodes, then traversing iteratively, increasing the distance parameter one by one for each step which is equivalent to manhattan distance in this case (x and y movement only). For edge cases, checked whether the initialized queue is empty or contains n*n elements. Finally, the longest distance is returned.
+- question 127. Word Ladder: solved first with simple BFS, storing all possible next word iterations in an adjacency list by comparing all 26 from words in the given word list and then performing BFS using it. Best approach: solved by applying multi directional BFS on a pattern bucket that iterates over the list in a single pass and stores wildcard patterns like "\*ot, h\*t, ho\*" and all matching words for the pattern in a hashmap. Then, the queue tracks the word, distance and the source. When a new node is visited, if it already exists in visited and there is a mismatch of sources, the sum of distance is returned, otherwise we continue and if the node is visited for the first time, it is appended to the queue instead. The main loop runs like a normal BFS where the queue alternates between words from different sources automatically.
 
 ### 10. DFS
-- question 200. Number of islands: solved by calling a recursive DFS function every time 1 is encountered in the grid. Instead of using a separate matrix to keep track of visited islands, turn the original islands in grid to 0. Finally, the count of times the DFS was called from the start is returned
-- question 1254. Number of enclosed islands: firstly, handle edge case of matrix size less than 3, which cannot have any enclosed islands. Then, solved by tracking a isEnclosed flag outside the function and then turning it false in case dfs is called at the outermost edges. Alternative: using a simple dfs on all the outermost edge elements to eliminate any island out of bounds, then simply counting all remaining islands. Alternative: return a boolean flag from the dfs function, true in case of 1 at the edge and flase in case of falling off the edge
+- question 200. Number of islands: solved by calling a recursive DFS function every time 1 is encountered in the grid. Instead of using a separate matrix to keep track of visited islands, turn the original islands in grid to 0. Finally, the count of times the DFS was called from the start is returned.
+- question 1254. Number of enclosed islands: firstly, handle edge case of matrix size less than 3, which cannot have any enclosed islands. Then, solved by tracking a isEnclosed flag outside the function and then turning it false in case dfs is called at the outermost edges. Alternative: using a simple dfs on all the outermost edge elements to eliminate any island out of bounds, then simply counting all remaining islands. Alternative: return a boolean flag from the dfs function, true in case of 1 at the edge and flase in case of falling off the edge.
 - question 1034. Coloring a border: solved by marking all visited places as negative on basis of what the subsequent dfs call returns (true of false). If the position is on the edge of matrix or next to another color, the square receives a false and gets negative target border color, otherwise true is returned if the value is negative and in which case, the value is set as negative initial color. Finally, all negative elements are made positive and final grid is returned.
-- question 1020. Number of enclaves: solved by eliminating all patches of land that touch the boundary through dfs and then counting the number of land left in the main loop. One could do this with dfs but simply counting the number of 1's left is easier and faster
+- question 1020. Number of enclaves: solved by eliminating all patches of land that touch the boundary through dfs and then counting the number of land left in the main loop. One could do this with dfs but simply counting the number of 1's left is easier and faster.
+- question 1376. Time needed to inform all employees: solved by creating a map which stores each manager's child nodes. Then, the dfs works by adding the worst time taken in the child paths with it's own time taken to inform the direct child node, returning the time for 'how long until everyone under me knows?'. Alternative: We can work by passing the time taken to reach the current node and then track a global worst time for all of the nodes.
