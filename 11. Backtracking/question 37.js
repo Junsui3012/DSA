@@ -58,3 +58,93 @@ var solveSudoku = function (board) {
     }
     backtrack(0, 0)
 };
+// Alternate: Blazing fast optimal
+/**
+var solveSudoku = function (board) {
+    const rows = new Uint16Array(9)
+    const columns = new Uint16Array(9)
+    const sections = new Uint16Array(9)
+    const empty = new Uint8Array(81)
+    const boxOf = (i, j) => ((i / 3 | 0) * 3 + (j / 3 | 0))
+    let count = 0
+
+    for (let i = 0; i <= 8; i++) {
+        for (let j = 0; j <= 8; j++) {
+            const ele = board[i][j]
+            if (ele === '.') {
+                empty[count++] = i * 9 + j
+            }
+            else {
+                const bit = 1 << (ele.charCodeAt(0) - 49)
+                sections[boxOf(i, j)] |= bit
+                rows[i] |= bit
+                columns[j] |= bit
+            }
+        }
+    }
+
+    const backtrack = (pos) => {
+        if (pos === count) {
+            return true
+        }
+
+        let bestPos = pos
+        let bestMask = 0
+        let bestCount = 10
+
+        for (let i = pos; i < count; i++) {
+            const p = empty[i]
+            const r = (p / 9) | 0
+            const c = p % 9
+            const s = boxOf(r, c)
+
+            const mask = (~(rows[r] | columns[c] | sections[s])) & 511
+
+            if (!mask) return false
+
+            let bits = mask
+            let n = 0
+            while (bits) {
+                bits &= bits - 1
+                n++
+            }
+
+            if (n < bestCount) {
+                bestCount = n
+                bestMask = mask
+                bestPos = i
+
+                if (n === 1) break
+            }
+        }
+
+        const t = empty[pos]
+        empty[pos] = empty[bestPos]
+        empty[bestPos] = t
+
+        const p = empty[pos]
+        const r = (p / 9) | 0
+        const c = p % 9
+        const s = boxOf(r, c)
+
+        while (bestMask) {
+            const bit = bestMask & -bestMask
+            bestMask ^= bit
+            rows[r] ^= bit
+            columns[c] ^= bit
+            sections[s] ^= bit
+
+            if (backtrack(pos + 1)) {
+                board[r][c] = String(32 - Math.clz32(bit))
+                return true
+            }
+
+            rows[r] ^= bit
+            columns[c] ^= bit
+            sections[s] ^= bit
+        }
+        return false
+    }
+    backtrack(0)
+};
+*/
